@@ -107,7 +107,7 @@ def basic_tokenizer(sentence):
   """Very basic tokenizer: split the sentence into a list of tokens."""
   words = []
   for space_separated_fragment in sentence.strip().split():
-    words.extend(_WORD_SPLIT.split(space_separated_fragment))
+    words.extend(_WORD_SPLIT.split(space_separated_fragment).decode('utf-8'))
   return [w for w in words if w]
 
 
